@@ -1,794 +1,1124 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>三連休のしおり 2026.2.21-23</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --primary: #2d5a7b;
-  --primary-light: #e8f0f6;
-  --accent: #e8734a;
-  --accent-light: #fef0eb;
-  --warm: #f5e6d3;
-  --cream: #faf7f2;
-  --sage: #8fae8b;
-  --sage-light: #eef4ed;
-  --text: #2c2c2c;
-  --text-light: #6b6b6b;
-  --border: #e0ddd8;
-  --white: #ffffff;
-  --shadow: 0 2px 12px rgba(0,0,0,0.08);
-  --radius: 16px;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  background: var(--cream);
-  color: var(--text);
-  line-height: 1.8;
-  font-size: 15px;
-}
-.shiori { max-width: 480px; margin: 0 auto; background: var(--white); min-height: 100vh; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三連休のしおり 2026.2.21-23</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2d5a7b;
+      --primary-light: #e8f0f6;
+      --accent: #e8734a;
+      --accent-light: #fef0eb;
+      --warm: #f5e6d3;
+      --cream: #faf7f2;
+      --sage: #8fae8b;
+      --sage-light: #eef4ed;
+      --text: #2c2c2c;
+      --text-light: #6b6b6b;
+      --border: #e0ddd8;
+      --white: #ffffff;
+      --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      --radius: 16px;
+    }
 
-/* ===== COVER ===== */
-.cover {
-  position: relative;
-  min-height: 100vh;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  text-align: center;
-  padding: 60px 32px;
-  background: linear-gradient(135deg, #e8f4f8 0%, #faf7f2 40%, #fef0eb 100%);
-  overflow: hidden;
-}
-.cover::before {
-  content: '';
-  position: absolute; top: -80px; right: -80px;
-  width: 260px; height: 260px;
-  border-radius: 50%;
-  background: rgba(143,174,139,0.15);
-}
-.cover::after {
-  content: '';
-  position: absolute; bottom: -60px; left: -60px;
-  width: 200px; height: 200px;
-  border-radius: 50%;
-  background: rgba(232,115,74,0.1);
-}
-.cover-label {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 13px; letter-spacing: 4px;
-  color: var(--primary);
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  position: relative; z-index: 1;
-}
-.cover-title {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 36px; font-weight: 700;
-  color: var(--primary);
-  line-height: 1.4;
-  margin-bottom: 8px;
-  position: relative; z-index: 1;
-}
-.cover-subtitle {
-  font-size: 14px; color: var(--text-light);
-  margin-bottom: 40px;
-  position: relative; z-index: 1;
-}
-.cover-date {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 20px; font-weight: 500;
-  color: var(--accent);
-  letter-spacing: 2px;
-  margin-bottom: 32px;
-  position: relative; z-index: 1;
-}
-.cover-icons {
-  display: flex; gap: 24px;
-  margin-bottom: 40px;
-  position: relative; z-index: 1;
-}
-.cover-icon {
-  width: 56px; height: 56px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 24px;
-  box-shadow: var(--shadow);
-}
-.cover-icon:nth-child(1) { background: var(--sage-light); }
-.cover-icon:nth-child(2) { background: var(--accent-light); }
-.cover-icon:nth-child(3) { background: var(--primary-light); }
-.cover-icon:nth-child(4) { background: var(--warm); }
-.cover-members {
-  position: relative; z-index: 1;
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 20px 28px;
-  box-shadow: var(--shadow);
-}
-.cover-members h3 {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 13px; color: var(--primary);
-  margin-bottom: 8px; letter-spacing: 1px;
-}
-.cover-members p { font-size: 14px; color: var(--text-light); }
-.cover-weather {
-  position: relative; z-index: 1;
-  margin-top: 32px; width: 100%;
-}
-.cover-weather h3 {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 13px; color: var(--primary);
-  margin-bottom: 12px; letter-spacing: 1px;
-  text-align: left;
-}
-.weather-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-.weather-card {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 14px 10px;
-  text-align: center;
-  box-shadow: var(--shadow);
-}
-.weather-card .day { font-size: 12px; color: var(--text-light); margin-bottom: 4px; }
-.weather-card .icon { font-size: 28px; margin: 4px 0; }
-.weather-card .temp { font-size: 13px; font-weight: 500; color: var(--text); }
-.weather-card .rain { font-size: 11px; color: var(--primary); }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* ===== SECTION ===== */
-.day-section { padding: 0 0 32px 0; }
-.day-header {
-  position: sticky; top: 0; z-index: 10;
-  padding: 20px 24px;
-  display: flex; align-items: center; gap: 14px;
-}
-.day-header.day1 { background: linear-gradient(135deg, var(--sage-light), var(--sage-light)); border-bottom: 2px solid var(--sage); }
-.day-header.day2 { background: linear-gradient(135deg, var(--primary-light), var(--primary-light)); border-bottom: 2px solid var(--primary); }
-.day-header.day3 { background: linear-gradient(135deg, var(--accent-light), var(--accent-light)); border-bottom: 2px solid var(--accent); }
-.day-num {
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 18px; font-weight: 700; color: var(--white);
-}
-.day1 .day-num { background: var(--sage); }
-.day2 .day-num { background: var(--primary); }
-.day3 .day-num { background: var(--accent); }
-.day-info h2 {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 18px; font-weight: 700;
-}
-.day-info p { font-size: 12px; color: var(--text-light); }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 15px;
+    }
 
-/* ===== TIMELINE ===== */
-.timeline { padding: 0 24px; position: relative; }
-.timeline::before {
-  content: '';
-  position: absolute; left: 44px; top: 0; bottom: 0;
-  width: 2px; background: var(--border);
-}
-.tl-item {
-  position: relative;
-  padding-left: 44px;
-  margin-bottom: 28px;
-}
-.tl-dot {
-  position: absolute; left: -7px; top: 4px;
-  width: 16px; height: 16px;
-  border-radius: 50%;
-  border: 3px solid var(--sage);
-  background: var(--white);
-  z-index: 2;
-}
-.day2 .tl-dot, .tl-dot.blue { border-color: var(--primary); }
-.day3 .tl-dot, .tl-dot.orange { border-color: var(--accent); }
-.tl-time {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 13px; font-weight: 700;
-  color: var(--text-light);
-  margin-bottom: 6px;
-}
+    .shiori {
+      max-width: 480px;
+      margin: 0 auto;
+      background: var(--white);
+      min-height: 100vh;
+    }
 
-/* ===== SPOT CARD ===== */
-.spot-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-.spot-header {
-  padding: 16px 18px 12px;
-  display: flex; align-items: center; gap: 12px;
-}
-.spot-emoji {
-  width: 40px; height: 40px;
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 22px;
-}
-.spot-emoji.green { background: var(--sage-light); }
-.spot-emoji.orange { background: var(--accent-light); }
-.spot-emoji.blue { background: var(--primary-light); }
-.spot-emoji.warm { background: var(--warm); }
-.spot-name {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 16px; font-weight: 700;
-}
-.spot-sub { font-size: 12px; color: var(--text-light); }
-.spot-body { padding: 0 18px 16px; }
-.spot-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 8px; margin-bottom: 12px;
-}
-.spot-info-item {
-  background: var(--cream);
-  border-radius: 10px;
-  padding: 10px 12px;
-}
-.spot-info-item .label {
-  font-size: 11px; color: var(--text-light);
-  margin-bottom: 2px;
-}
-.spot-info-item .value {
-  font-size: 13px; font-weight: 500;
-}
-.spot-tip {
-  background: var(--primary-light);
-  border-radius: 10px;
-  padding: 12px 14px;
-  font-size: 13px;
-  color: var(--primary);
-  margin-top: 8px;
-  line-height: 1.6;
-}
-.spot-tip.warn {
-  background: #fff8e1;
-  color: #8d6e00;
-}
-.spot-tip.green-tip {
-  background: var(--sage-light);
-  color: #4a6b47;
-}
+    /* ===== COVER ===== */
+    .cover {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 32px;
+      background: linear-gradient(135deg, #e8f4f8 0%, #faf7f2 40%, #fef0eb 100%);
+      overflow: hidden;
+    }
 
-/* ===== BABY FACILITIES ===== */
-.baby-tag-list {
-  display: flex; flex-wrap: wrap; gap: 6px;
-  margin-top: 8px;
-}
-.baby-tag {
-  display: inline-flex; align-items: center; gap: 4px;
-  background: var(--accent-light);
-  border-radius: 20px;
-  padding: 4px 10px;
-  font-size: 11px; color: var(--accent);
-  font-weight: 500;
-}
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: rgba(143, 174, 139, 0.15);
+    }
 
-/* ===== HIGHLIGHT ===== */
-.highlight-card {
-  margin: 0 24px 24px;
-  background: linear-gradient(135deg, var(--sage-light), #dceadb);
-  border-radius: var(--radius);
-  padding: 18px;
-}
-.highlight-card h4 {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 14px; margin-bottom: 10px;
-  color: var(--sage);
-}
-.highlight-card ul {
-  list-style: none; padding: 0;
-}
-.highlight-card li {
-  font-size: 13px;
-  padding: 4px 0;
-  padding-left: 18px;
-  position: relative;
-}
-.highlight-card li::before {
-  content: '✦';
-  position: absolute; left: 0;
-  color: var(--sage);
-  font-size: 10px;
-}
+    .cover::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: rgba(232, 115, 74, 0.1);
+    }
 
-/* ===== CHECKLIST ===== */
-.checklist-section {
-  padding: 32px 24px;
-  background: var(--cream);
-}
-.checklist-section h2 {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 20px; font-weight: 700;
-  text-align: center;
-  margin-bottom: 24px;
-  color: var(--primary);
-}
-.checklist-group {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 18px;
-  margin-bottom: 14px;
-  box-shadow: var(--shadow);
-}
-.checklist-group h4 {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 14px;
-  color: var(--primary);
-  margin-bottom: 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
-}
-.check-item {
-  display: flex; align-items: center; gap: 10px;
-  padding: 6px 0;
-  font-size: 14px;
-  cursor: pointer;
-}
-.check-item input[type="checkbox"] {
-  width: 18px; height: 18px;
-  accent-color: var(--sage);
-  cursor: pointer;
-}
-.check-item.checked label {
-  text-decoration: line-through;
-  color: var(--text-light);
-}
+    .cover-label {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 13px;
+      letter-spacing: 4px;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
 
-/* ===== MEMO ===== */
-.memo-section {
-  padding: 32px 24px;
-}
-.memo-section h2 {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 20px; font-weight: 700;
-  text-align: center;
-  margin-bottom: 20px;
-  color: var(--primary);
-}
-.memo-area {
-  width: 100%;
-  min-height: 200px;
-  border: 1px dashed var(--border);
-  border-radius: var(--radius);
-  padding: 16px;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 14px;
-  background: var(--cream);
-  resize: vertical;
-  outline: none;
-  color: var(--text);
-}
-.memo-area:focus { border-color: var(--primary); }
+    .cover-title {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.4;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+    }
 
-/* ===== FOOTER ===== */
-.shiori-footer {
-  text-align: center;
-  padding: 40px 24px;
-  color: var(--text-light);
-  font-size: 12px;
-  background: var(--primary);
-  color: rgba(255,255,255,0.7);
-}
-.shiori-footer .heart { color: var(--accent); font-size: 16px; }
+    .cover-subtitle {
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
+    }
 
-/* ===== DIVIDER ===== */
-.section-divider {
-  display: flex; align-items: center; justify-content: center;
-  gap: 12px; padding: 24px;
-  color: var(--border);
-  font-size: 12px;
-}
-.section-divider::before, .section-divider::after {
-  content: '';
-  flex: 1; height: 1px;
-  background: var(--border);
-}
+    .cover-date {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 2px;
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 1;
+    }
 
-/* ===== RESPONSIVE ===== */
-@media (min-width: 481px) {
-  body { background: #e8e4df; padding: 20px 0; }
-  .shiori {
-    border-radius: 24px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
-    overflow: hidden;
-  }
-}
-/* ===== PRINT ===== */
-@media print {
-  body { background: white; }
-  .shiori { max-width: 100%; box-shadow: none; }
-  .day-header { position: static; }
-  .cover { min-height: auto; padding: 40px 24px; page-break-after: always; }
-  .day-section { page-break-before: always; }
-  .checklist-section { page-break-before: always; }
-}
-</style>
+    .cover-icons {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .cover-icon:nth-child(1) {
+      background: var(--sage-light);
+    }
+
+    .cover-icon:nth-child(2) {
+      background: var(--accent-light);
+    }
+
+    .cover-icon:nth-child(3) {
+      background: var(--primary-light);
+    }
+
+    .cover-icon:nth-child(4) {
+      background: var(--warm);
+    }
+
+    .cover-members {
+      position: relative;
+      z-index: 1;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .cover-members h3 {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 13px;
+      color: var(--primary);
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .cover-members p {
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    .cover-weather {
+      position: relative;
+      z-index: 1;
+      margin-top: 32px;
+      width: 100%;
+    }
+
+    .cover-weather h3 {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 13px;
+      color: var(--primary);
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+
+    .weather-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .weather-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 14px 10px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .weather-card .day {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+
+    .weather-card .icon {
+      font-size: 28px;
+      margin: 4px 0;
+    }
+
+    .weather-card .temp {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .weather-card .rain {
+      font-size: 11px;
+      color: var(--primary);
+    }
+
+    /* ===== SECTION ===== */
+    .day-section {
+      padding: 0 0 32px 0;
+    }
+
+    .day-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .day-header.day1 {
+      background: linear-gradient(135deg, var(--sage-light), var(--sage-light));
+      border-bottom: 2px solid var(--sage);
+    }
+
+    .day-header.day2 {
+      background: linear-gradient(135deg, var(--primary-light), var(--primary-light));
+      border-bottom: 2px solid var(--primary);
+    }
+
+    .day-header.day3 {
+      background: linear-gradient(135deg, var(--accent-light), var(--accent-light));
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .day-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .day1 .day-num {
+      background: var(--sage);
+    }
+
+    .day2 .day-num {
+      background: var(--primary);
+    }
+
+    .day3 .day-num {
+      background: var(--accent);
+    }
+
+    .day-info h2 {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .day-info p {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline {
+      padding: 0 24px;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 44px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .tl-item {
+      position: relative;
+      padding-left: 44px;
+      margin-bottom: 28px;
+    }
+
+    .tl-dot {
+      position: absolute;
+      left: -7px;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 3px solid var(--sage);
+      background: var(--white);
+      z-index: 2;
+    }
+
+    .day2 .tl-dot,
+    .tl-dot.blue {
+      border-color: var(--primary);
+    }
+
+    .day3 .tl-dot,
+    .tl-dot.orange {
+      border-color: var(--accent);
+    }
+
+    .tl-time {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+
+    /* ===== SPOT CARD ===== */
+    .spot-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .spot-header {
+      padding: 16px 18px 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .spot-emoji {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .spot-emoji.green {
+      background: var(--sage-light);
+    }
+
+    .spot-emoji.orange {
+      background: var(--accent-light);
+    }
+
+    .spot-emoji.blue {
+      background: var(--primary-light);
+    }
+
+    .spot-emoji.warm {
+      background: var(--warm);
+    }
+
+    .spot-name {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .spot-sub {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    .spot-body {
+      padding: 0 18px 16px;
+    }
+
+    .spot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .spot-info-item {
+      background: var(--cream);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .spot-info-item .label {
+      font-size: 11px;
+      color: var(--text-light);
+      margin-bottom: 2px;
+    }
+
+    .spot-info-item .value {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .spot-tip {
+      background: var(--primary-light);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 13px;
+      color: var(--primary);
+      margin-top: 8px;
+      line-height: 1.6;
+    }
+
+    .spot-tip.warn {
+      background: #fff8e1;
+      color: #8d6e00;
+    }
+
+    .spot-tip.green-tip {
+      background: var(--sage-light);
+      color: #4a6b47;
+    }
+
+    /* ===== OFFICIAL LINK ===== */
+    .spot-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 10px;
+      padding: 7px 14px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .spot-link:hover {
+      opacity: 0.85;
+    }
+
+    .spot-link.green-link {
+      background: var(--sage);
+    }
+
+    .spot-link.orange-link {
+      background: var(--accent);
+    }
+
+    /* ===== DAY3 NOTE ===== */
+    .day3-note {
+      margin: 0 24px 20px;
+      padding: 16px 18px;
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      font-size: 13px;
+      color: var(--accent);
+      line-height: 1.7;
+    }
+
+    /* ===== BABY FACILITIES ===== */
+    .baby-tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .baby-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--accent-light);
+      border-radius: 20px;
+      padding: 4px 10px;
+      font-size: 11px;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* ===== HIGHLIGHT ===== */
+    .highlight-card {
+      margin: 0 24px 24px;
+      background: linear-gradient(135deg, var(--sage-light), #dceadb);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+
+    .highlight-card h4 {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: var(--sage);
+    }
+
+    .highlight-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .highlight-card li {
+      font-size: 13px;
+      padding: 4px 0;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .highlight-card li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--sage);
+      font-size: 10px;
+    }
+
+    /* ===== CHECKLIST ===== */
+    .checklist-section {
+      padding: 32px 24px;
+      background: var(--cream);
+    }
+
+    .checklist-section h2 {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 24px;
+      color: var(--primary);
+    }
+
+    .checklist-group {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .checklist-group h4 {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 14px;
+      color: var(--primary);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 0;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .check-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--sage);
+      cursor: pointer;
+    }
+
+    .check-item.checked label {
+      text-decoration: line-through;
+      color: var(--text-light);
+    }
+
+    /* ===== MEMO ===== */
+    .memo-section {
+      padding: 32px 24px;
+    }
+
+    .memo-section h2 {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .memo-area {
+      width: 100%;
+      min-height: 200px;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 14px;
+      background: var(--cream);
+      resize: vertical;
+      outline: none;
+      color: var(--text);
+    }
+
+    .memo-area:focus {
+      border-color: var(--primary);
+    }
+
+    /* ===== FOOTER ===== */
+    .shiori-footer {
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--text-light);
+      font-size: 12px;
+      background: var(--primary);
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .shiori-footer .heart {
+      color: var(--accent);
+      font-size: 16px;
+    }
+
+    /* ===== DIVIDER ===== */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 24px;
+      color: var(--border);
+      font-size: 12px;
+    }
+
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 481px) {
+      body {
+        background: #e8e4df;
+        padding: 20px 0;
+      }
+
+      .shiori {
+        border-radius: 24px;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+      }
+    }
+
+    /* ===== PRINT ===== */
+    @media print {
+      body {
+        background: white;
+      }
+
+      .shiori {
+        max-width: 100%;
+        box-shadow: none;
+      }
+
+      .day-header {
+        position: static;
+      }
+
+      .cover {
+        min-height: auto;
+        padding: 40px 24px;
+        page-break-after: always;
+      }
+
+      .day-section {
+        page-break-before: always;
+      }
+
+      .checklist-section {
+        page-break-before: always;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="shiori">
+  <div class="shiori">
 
-  <!-- ===== COVER ===== -->
-  <section class="cover">
-    <div class="cover-label">FAMILY TRIP</div>
-    <h1 class="cover-title">三連休の<br>しおり</h1>
-    <p class="cover-subtitle">〜 横浜おでかけプラン 〜</p>
-    <div class="cover-date">2026. 2. 21 sat — 23 mon</div>
-    <div class="cover-icons">
-      <div class="cover-icon">🌳</div>
-      <div class="cover-icon">🍣</div>
-      <div class="cover-icon">🦁</div>
-      <div class="cover-icon">🛍️</div>
-    </div>
-    <div class="cover-members">
-      <h3>👨‍👩‍👧 メンバー</h3>
-      <p>パパ・ママ・赤ちゃん</p>
-    </div>
-    <div class="cover-weather">
-      <h3>🌤 天気予報</h3>
-      <div class="weather-grid">
-        <div class="weather-card">
-          <div class="day">2/21（土）</div>
-          <div class="icon">☀️</div>
-          <div class="temp">5〜14℃</div>
-          <div class="rain">☂ 10%</div>
-        </div>
-        <div class="weather-card">
-          <div class="day">2/22（日）</div>
-          <div class="icon">☀️</div>
-          <div class="temp">7〜17℃</div>
-          <div class="rain">☂ 20%</div>
-        </div>
-        <div class="weather-card">
-          <div class="day">2/23（月祝）</div>
-          <div class="icon">⛅</div>
-          <div class="temp">12〜20℃</div>
-          <div class="rain">☂ 30%</div>
-        </div>
+    <!-- ===== COVER ===== -->
+    <section class="cover">
+      <div class="cover-label">FAMILY TRIP</div>
+      <h1 class="cover-title">三連休の<br>しおり</h1>
+      <p class="cover-subtitle">〜 横浜おでかけプラン 〜</p>
+      <div class="cover-date">2026. 2. 21 sat — 23 mon</div>
+      <div class="cover-icons">
+        <div class="cover-icon">🌳</div>
+        <div class="cover-icon">🍣</div>
+        <div class="cover-icon">🦁</div>
+        <div class="cover-icon">🛍️</div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== DAY 1 ===== -->
-  <section class="day-section">
-    <div class="day-header day1">
-      <div class="day-num">1</div>
-      <div class="day-info">
-        <h2>こどもの国 → ゆず庵</h2>
-        <p>2月21日（土）☀️ 5〜14℃</p>
+      <div class="cover-members">
+        <h3>👨‍👩‍👧 メンバー</h3>
+        <p>🧑 ゆーさん（父）・👩 ひーさん（母）・👶 友陽</p>
       </div>
-    </div>
-
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-time">08:30</div>
-        <div class="spot-card">
-          <div class="spot-header">
-            <div class="spot-emoji green">🚗</div>
-            <div><div class="spot-name">出発・駐車場到着</div>
-            <div class="spot-sub">早めに出発して混雑回避！</div></div>
+      <div class="cover-weather">
+        <h3>🌤 天気予報</h3>
+        <div class="weather-grid">
+          <div class="weather-card">
+            <div class="day">2/21（土）</div>
+            <div class="icon">☀️</div>
+            <div class="temp">5〜14℃</div>
+            <div class="rain">☂ 10%</div>
           </div>
-          <div class="spot-body">
-            <div class="spot-tip warn">⚠ 土日祝は駐車場・周辺道路が大変混雑。駐車場は8:30開場なのでそれに合わせて出発を。</div>
+          <div class="weather-card">
+            <div class="day">2/22（日）</div>
+            <div class="icon">☀️</div>
+            <div class="temp">7〜17℃</div>
+            <div class="rain">☂ 20%</div>
+          </div>
+          <div class="weather-card">
+            <div class="day">2/23（月祝）</div>
+            <div class="icon">⛅</div>
+            <div class="temp">12〜20℃</div>
+            <div class="rain">☂ 30%</div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-time">09:30</div>
-        <div class="spot-card">
-          <div class="spot-header">
-            <div class="spot-emoji green">🌳</div>
-            <div><div class="spot-name">こどもの国</div>
-            <div class="spot-sub">横浜市青葉区奈良町700</div></div>
-          </div>
-          <div class="spot-body">
-            <div class="spot-grid">
-              <div class="spot-info-item"><div class="label">営業時間</div><div class="value">9:30〜16:30</div></div>
-              <div class="spot-info-item"><div class="label">最終入園</div><div class="value">15:30</div></div>
-              <div class="spot-info-item"><div class="label">入園料（大人）</div><div class="value">600円</div></div>
-              <div class="spot-info-item"><div class="label">入園料（0-2歳）</div><div class="value">無料 🎉</div></div>
-              <div class="spot-info-item"><div class="label">駐車場</div><div class="value">1,000円</div></div>
-              <div class="spot-info-item"><div class="label">支払い</div><div class="value">現金のみ</div></div>
+    <!-- ===== DAY 1 ===== -->
+    <section class="day-section">
+      <div class="day-header day1">
+        <div class="day-num">1</div>
+        <div class="day-info">
+          <h2>こどもの国 → ゆず庵</h2>
+          <p>2月21日（土）☀️ 5〜14℃</p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">09:15</div>
+          <div class="spot-card">
+            <div class="spot-header">
+              <div class="spot-emoji green">🚗</div>
+              <div>
+                <div class="spot-name">出発</div>
+                <div class="spot-sub">こどもの国へ向かう</div>
+              </div>
             </div>
-            <div class="baby-tag-list">
-              <span class="baby-tag">👶 授乳室4ヶ所</span>
-              <span class="baby-tag">🚼 おむつ交換台</span>
-              <span class="baby-tag">🍼 ミルク用お湯</span>
-              <span class="baby-tag">👣 すくすくアイランド</span>
-              <span class="baby-tag">🛒 ベビーカー貸出</span>
-            </div>
-            <div class="spot-tip warn">💴 現金のみ！事前にATMで用意を。</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="highlight-card">
-      <h4>🌸 イベント情報</h4>
-      <ul>
-        <li>梅まつり開催中！スタンプビンゴあり</li>
-        <li>フィールドゲーム〈冬バージョン〉3/1まで</li>
-        <li>あそびの広場（無料工作）</li>
-        <li>乳搾り体験（土日祝）</li>
-      </ul>
-    </div>
-
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-time">12:00</div>
-        <div class="spot-card">
-          <div class="spot-header">
-            <div class="spot-emoji green">🚗</div>
-            <div><div class="spot-name">こどもの国出発</div>
-            <div class="spot-sub">ゆず庵へ移動（約15分）</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-time">13:00</div>
-        <div class="spot-card">
-          <div class="spot-header">
-            <div class="spot-emoji orange">🍣</div>
-            <div><div class="spot-name">ゆず庵 横浜青葉台店</div>
-            <div class="spot-sub">しゃぶしゃぶ × お寿司 食べ放題</div></div>
-          </div>
-          <div class="spot-body">
-            <div class="spot-grid">
-              <div class="spot-info-item"><div class="label">営業時間</div><div class="value">11:00〜</div></div>
-              <div class="spot-info-item"><div class="label">予約</div><div class="value">13:00〜</div></div>
-              <div class="spot-info-item"><div class="label">ゆず庵コース</div><div class="value">4,048円</div></div>
-              <div class="spot-info-item"><div class="label">就学前</div><div class="value">無料 🎉</div></div>
-            </div>
-            <div class="baby-tag-list">
-              <span class="baby-tag">🚼 おむつ替えシート</span>
-              <span class="baby-tag">🧒 お子様メニュー充実</span>
-              <span class="baby-tag">🍱 蓋付きコップ提供</span>
-              <span class="baby-tag">🎽 お子様エプロン貸出</span>
-              <span class="baby-tag">📱 タッチパネル注文</span>
-            </div>
-            <div class="spot-tip green-tip">🍣 「自分で握るお寿司セット」がおすすめ！就学前のお子さま無料なのが嬉しい。</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider">✦ ✦ ✦</div>
-
-  <!-- ===== DAY 2 ===== -->
-  <section class="day-section">
-    <div class="day-header day2">
-      <div class="day-num">2</div>
-      <div class="day-info">
-        <h2>よこはま動物園ズーラシア</h2>
-        <p>2月22日（日）☀️ 7〜17℃</p>
-      </div>
-    </div>
-
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-dot blue"></div>
-        <div class="tl-time">09:00</div>
-        <div class="spot-card">
-          <div class="spot-header">
-            <div class="spot-emoji blue">🚗</div>
-            <div><div class="spot-name">出発</div>
-            <div class="spot-sub">開園に合わせて早めに出発</div></div>
-          </div>
-          <div class="spot-body">
-            <div class="spot-tip">💡 開園直後9:30が比較的空いています。駐車場は8:30から開場。</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot blue"></div>
-        <div class="tl-time">09:30</div>
-        <div class="spot-card">
-          <div class="spot-header">
-            <div class="spot-emoji blue">🦁</div>
-            <div><div class="spot-name">ズーラシア</div>
-            <div class="spot-sub">横浜市旭区上白根町1175-1</div></div>
-          </div>
-          <div class="spot-body">
-            <div class="spot-grid">
-              <div class="spot-info-item"><div class="label">営業時間</div><div class="value">9:30〜16:30</div></div>
-              <div class="spot-info-item"><div class="label">最終入園</div><div class="value">16:00</div></div>
-              <div class="spot-info-item"><div class="label">入園料（大人）</div><div class="value">800円</div></div>
-              <div class="spot-info-item"><div class="label">小学生未満</div><div class="value">無料 🎉</div></div>
-              <div class="spot-info-item"><div class="label">駐車場</div><div class="value">1,000円</div></div>
-              <div class="spot-info-item"><div class="label">支払い</div><div class="value">カード・IC可</div></div>
-            </div>
-            <div class="baby-tag-list">
-              <span class="baby-tag">👶 授乳室5ヶ所</span>
-              <span class="baby-tag">🚼 全トイレにおむつ台</span>
-              <span class="baby-tag">🍼 調乳ポット</span>
-              <span class="baby-tag">📦 紙おむつ販売</span>
-              <span class="baby-tag">🛒 B型ベビーカー500円</span>
-              <span class="baby-tag">🍱 離乳食持込OK</span>
+            <div class="spot-body">
+              <div class="spot-tip warn">⚠ 土日祝は駐車場・周辺道路が混雑。駐車場は先着順なので早めの到着がおすすめ。</div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="highlight-card" style="background: linear-gradient(135deg, var(--primary-light), #d4e6f1);">
-      <h4 style="color: var(--primary);">🐻‍❄️ 冬の見どころ</h4>
-      <ul>
-        <li>ホッキョクグマ・レッサーパンダが活発！</li>
-        <li>サル団子（寄り添って暖を取る姿）</li>
-        <li>園内の梅が開花し始める時期</li>
-        <li>2月は年間で一番空いている時期</li>
-      </ul>
-    </div>
-
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-dot blue"></div>
-        <div class="tl-time">TIPS</div>
-        <div class="spot-card">
-          <div class="spot-header">
-            <div class="spot-emoji blue">🚌</div>
-            <div><div class="spot-name">園内バスが便利！</div>
-            <div class="spot-sub">大人200円 / 子ども100円</div></div>
-          </div>
-          <div class="spot-body">
-            <div class="spot-tip">🗺 正門 → アフリカのサバンナエリアの移動に便利。広い園内を効率よく回れます。</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider">✦ ✦ ✦</div>
-
-  <!-- ===== DAY 3 ===== -->
-  <section class="day-section">
-    <div class="day-header day3">
-      <div class="day-num">3</div>
-      <div class="day-info">
-        <h2>ゆめが丘ソラトス</h2>
-        <p>2月23日（月・祝）⛅ 12〜20℃</p>
-      </div>
-    </div>
-
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-dot orange"></div>
-        <div class="tl-time">10:00</div>
-        <div class="spot-card">
-          <div class="spot-header">
-            <div class="spot-emoji warm">🛍️</div>
-            <div><div class="spot-name">ソラトス到着</div>
-            <div class="spot-sub">入場無料・2024年7月OPEN</div></div>
-          </div>
-          <div class="spot-body">
-            <div class="spot-grid">
-              <div class="spot-info-item"><div class="label">ショッピング</div><div class="value">10:00〜20:00</div></div>
-              <div class="spot-info-item"><div class="label">レストラン</div><div class="value">11:00〜21:00</div></div>
-              <div class="spot-info-item"><div class="label">そうにゃんぱーく</div><div class="value">10:30〜17:00</div></div>
-              <div class="spot-info-item"><div class="label">入場料</div><div class="value">無料 🎉</div></div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">09:30</div>
+          <div class="spot-card">
+            <div class="spot-header">
+              <div class="spot-emoji green">🌳</div>
+              <div>
+                <div class="spot-name">こどもの国</div>
+                <div class="spot-sub">横浜市青葉区奈良町700</div>
+              </div>
+            </div>
+            <div class="spot-body">
+              <div class="spot-grid">
+                <div class="spot-info-item">
+                  <div class="label">営業時間</div>
+                  <div class="value">9:30〜16:30</div>
+                </div>
+                <div class="spot-info-item">
+                  <div class="label">最終入園</div>
+                  <div class="value">15:30</div>
+                </div>
+                <div class="spot-info-item">
+                  <div class="label">入園料（大人）</div>
+                  <div class="value">600円</div>
+                </div>
+                <div class="spot-info-item">
+                  <div class="label">入園料（0-2歳）</div>
+                  <div class="value">無料 🎉</div>
+                </div>
+                <div class="spot-info-item">
+                  <div class="label">駐車場</div>
+                  <div class="value">1,000円</div>
+                </div>
+                <div class="spot-info-item">
+                  <div class="label">支払い</div>
+                  <div class="value">現金のみ</div>
+                </div>
+              </div>
+              <div class="baby-tag-list">
+                <span class="baby-tag">👶 授乳室4ヶ所</span>
+                <span class="baby-tag">🚼 おむつ交換台</span>
+                <span class="baby-tag">🍼 ミルク用お湯</span>
+                <span class="baby-tag">👣 すくすくアイランド</span>
+                <span class="baby-tag">🛒 ベビーカー貸出</span>
+              </div>
+              <div class="spot-tip warn">💴 現金のみ！事前にATMで用意を。</div>
+              <a href="https://www.kodomonokuni.org/" target="_blank" class="spot-link green-link">🔗 公式サイトを見る</a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="tl-item">
-        <div class="tl-dot orange"></div>
-        <div class="tl-time">10:30</div>
-        <div class="spot-card">
-          <div class="spot-header">
-            <div class="spot-emoji warm">🐱</div>
-            <div><div class="spot-name">そうにゃんぱーく</div>
-            <div class="spot-sub">屋上約3,000㎡の広場・無料</div></div>
+      <div class="highlight-card">
+        <h4>🌸 イベント情報</h4>
+        <ul>
+          <li>梅まつり開催中！スタンプビンゴあり</li>
+          <li>フィールドゲーム〈冬バージョン〉3/1まで</li>
+          <li>あそびの広場（無料工作）</li>
+          <li>乳搾り体験（土日祝）</li>
+        </ul>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">12:00</div>
+          <div class="spot-card">
+            <div class="spot-header">
+              <div class="spot-emoji green">🚗</div>
+              <div>
+                <div class="spot-name">こどもの国出発</div>
+                <div class="spot-sub">ゆず庵へ移動（約15分）</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-time">13:00</div>
+          <div class="spot-card">
+            <div class="spot-header">
+              <div class="spot-emoji orange">🍣</div>
+              <div>
+                <div class="spot-name">ゆず庵 横浜青葉台店</div>
+                <div class="spot-sub">しゃぶしゃぶ × お寿司 食べ放題</div>
+              </div>
+            </div>
+            <div class="spot-body">
+              <div class="spot-grid">
+                <div class="spot-info-item">
+                  <div class="label">営業時間</div>
+                  <div class="value">11:00〜</div>
+                </div>
+                <div class="spot-info-item">
+                  <div class="label">予約</div>
+                  <div class="value">13:00〜</div>
+                </div>
+                <div class="spot-info-item">
+                  <div class="label">ゆず庵コース</div>
+                  <div class="value">4,048円</div>
+                </div>
+                <div class="spot-info-item">
+                  <div class="label">就学前</div>
+                  <div class="value">無料 🎉</div>
+                </div>
+              </div>
+              <div class="baby-tag-list">
+                <span class="baby-tag">🚼 おむつ替えシート</span>
+                <span class="baby-tag">🧒 お子様メニュー充実</span>
+                <span class="baby-tag">🍱 蓋付きコップ提供</span>
+                <span class="baby-tag">🎽 お子様エプロン貸出</span>
+                <span class="baby-tag">📱 タッチパネル注文</span>
+              </div>
+              <div class="spot-tip green-tip">🍣 「自分で握るお寿司セット」がおすすめ！就学前の友陽は無料なのが嬉しい。</div>
+              <a href="https://www.shabu-yuzuan.jp/" target="_blank" class="spot-link orange-link">🔗 公式サイトを見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider">✦ ✦ ✦</div>
+
+    <!-- ===== DAY 2 ===== -->
+    <section class="day-section">
+      <div class="day-header day2">
+        <div class="day-num">2</div>
+        <div class="day-info">
+          <h2>よこはま動物園ズーラシア</h2>
+          <p>2月22日（日）☀️ 7〜17℃</p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot blue"></div>
+          <div class="tl-time">09:00</div>
+          <div class="spot-card">
+            <div class="spot-header">
+              <div class="spot-emoji blue">🚗</div>
+              <div>
+                <div class="spot-name">出発</div>
+                <div class="spot-sub">開園に合わせて早めに出発</div>
+              </div>
+            </div>
+            <div class="spot-body">
+              <div class="spot-tip">💡 開園直後9:30が比較的空いています。駐車場は8:30から開場。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot blue"></div>
+          <div class="tl-time">09:30</div>
+          <div class="spot-card">
+            <div class="spot-header">
+              <div class="spot-emoji blue">🦁</div>
+              <div>
+                <div class="spot-name">ズーラシア</div>
+                <div class="spot-sub">横浜市旭区上白根町1175-1</div>
+              </div>
+            </div>
+            <div class="spot-body">
+              <div class="spot-grid">
+                <div class="spot-info-item">
+                  <div class="label">営業時間</div>
+                  <div class="value">9:30〜16:30</div>
+                </div>
+                <div class="spot-info-item">
+                  <div class="label">最終入園</div>
+                  <div class="value">16:00</div>
+                </div>
+                <div class="spot-info-item">
+                  <div class="label">入園料（大人）</div>
+                  <div class="value">800円</div>
+                </div>
+                <div class="spot-info-item">
+                  <div class="label">小学生未満</div>
+                  <div class="value">無料 🎉</div>
+                </div>
+                <div class="spot-info-item">
+                  <div class="label">駐車場</div>
+                  <div class="value">1,000円</div>
+                </div>
+                <div class="spot-info-item">
+                  <div class="label">支払い</div>
+                  <div class="value">カード・IC可</div>
+                </div>
+              </div>
+              <div class="baby-tag-list">
+                <span class="baby-tag">👶 授乳室5ヶ所</span>
+                <span class="baby-tag">🚼 全トイレにおむつ台</span>
+                <span class="baby-tag">🍼 調乳ポット</span>
+                <span class="baby-tag">📦 紙おむつ販売</span>
+                <span class="baby-tag">🛒 B型ベビーカー500円</span>
+                <span class="baby-tag">🍱 離乳食持込OK</span>
+              </div>
+              <a href="https://www.hama-midorinokyokai.or.jp/zoo/zoorasia/" target="_blank" class="spot-link">🔗
+                公式サイトを見る</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="tl-item">
-        <div class="tl-dot orange"></div>
-        <div class="tl-time">12:00</div>
-        <div class="spot-card">
-          <div class="spot-header">
-            <div class="spot-emoji warm">🍽️</div>
-            <div><div class="spot-name">ランチ</div>
-            <div class="spot-sub">FOOD STATION / SORATOS DINING</div></div>
+      <div class="highlight-card" style="background: linear-gradient(135deg, var(--primary-light), #d4e6f1);">
+        <h4 style="color: var(--primary);">🐻‍❄️ 冬の見どころ</h4>
+        <ul>
+          <li>ホッキョクグマ・レッサーパンダが活発！</li>
+          <li>サル団子（寄り添って暖を取る姿）</li>
+          <li>園内の梅が開花し始める時期</li>
+          <li>2月は年間で一番空いている時期</li>
+        </ul>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot blue"></div>
+          <div class="tl-time">TIPS</div>
+          <div class="spot-card">
+            <div class="spot-header">
+              <div class="spot-emoji blue">🚌</div>
+              <div>
+                <div class="spot-name">園内バスが便利！</div>
+                <div class="spot-sub">大人200円 / 子ども100円</div>
+              </div>
+            </div>
+            <div class="spot-body">
+              <div class="spot-tip">🗺 正門 → アフリカのサバンナエリアの移動に便利。広い園内を効率よく回れます。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider">✦ ✦ ✦</div>
+
+    <!-- ===== DAY 3 ===== -->
+    <section class="day-section">
+      <div class="day-header day3">
+        <div class="day-num">3</div>
+        <div class="day-info">
+          <h2>プロミライズ青葉台（友達宅）</h2>
+          <p>2月23日（月・祝）⛅ 12〜20℃</p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot orange"></div>
+          <div class="tl-time">AM</div>
+          <div class="spot-card">
+            <div class="spot-header">
+              <div class="spot-emoji warm">🏠</div>
+              <div>
+                <div class="spot-name">プロミライズ青葉台</div>
+                <div class="spot-sub">お友達のお家へ遊びに行く</div>
+              </div>
+            </div>
+            <div class="spot-body">
+              <div class="spot-tip">👫 友達宅で楽しい時間を過ごそう！</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="tl-item">
-        <div class="tl-dot orange"></div>
-        <div class="tl-time">14:00</div>
-        <div class="spot-card">
-          <div class="spot-header">
-            <div class="spot-emoji warm">🎮</div>
-            <div><div class="spot-name">ASOBLE / ショッピング</div>
-            <div class="spot-sub">ふわふわドーム・キッズエリアなど</div></div>
-          </div>
-        </div>
+      <div class="day3-note">📌 3日目はお友達宅訪問のため、ゆめが丘ソラトスには行けない可能性があります。時間に余裕があれば立ち寄りましょう！</div>
+
+      <div class="highlight-card" style="background: linear-gradient(135deg, var(--accent-light), #fde8dc);">
+        <h4 style="color: var(--accent);">🛍️ もし行けたら：ソラトス情報</h4>
+        <ul>
+          <li>入場無料・2024年7月OPEN</li>
+          <li>ショッピング 10:00〜20:00</li>
+          <li>そうにゃんぱーく（屋上広場）10:30〜17:00</li>
+          <li>駐車場：1,000円以上で1h無料〜10,000円以上で5h無料</li>
+        </ul>
+        <a href="https://yumegaoka-soratos.com/" target="_blank" class="spot-link orange-link"
+          style="margin-top:12px;">🔗 ソラトス公式サイト</a>
       </div>
-    </div>
+    </section>
 
-    <div class="highlight-card" style="background: linear-gradient(135deg, var(--accent-light), #fde8dc);">
-      <h4 style="color: var(--accent);">🅿️ 駐車場割引</h4>
-      <ul>
-        <li>1,000円以上 → 1時間無料</li>
-        <li>3,000円以上 → 2時間無料</li>
-        <li>5,000円以上 → 3時間無料</li>
-        <li>10,000円以上 → 5時間無料（最大）</li>
-        <li>109シネマズ利用 → +3時間無料</li>
-      </ul>
-    </div>
-  </section>
+    <div class="section-divider">✦ ✦ ✦</div>
 
-  <div class="section-divider">✦ ✦ ✦</div>
+    <!-- ===== CHECKLIST ===== -->
+    <section class="checklist-section">
+      <h2>🎒 持ち物チェックリスト</h2>
+      <div class="checklist-group">
+        <h4>👶 赤ちゃん用品</h4>
+        <label class="check-item"><input type="checkbox"><span>おむつ・おしりふき（多めに）</span></label>
+        <label class="check-item"><input type="checkbox"><span>授乳グッズ / ミルク</span></label>
+        <label class="check-item"><input type="checkbox"><span>離乳食・おやつ</span></label>
+        <label class="check-item"><input type="checkbox"><span>着替え（2〜3組）</span></label>
+        <label class="check-item"><input type="checkbox"><span>抱っこ紐</span></label>
+        <label class="check-item"><input type="checkbox"><span>お気に入りのおもちゃ</span></label>
+      </div>
+      <div class="checklist-group">
+        <h4>🧥 防寒・お出かけ</h4>
+        <label class="check-item"><input type="checkbox"><span>防寒着（土曜は朝5℃！）</span></label>
+        <label class="check-item"><input type="checkbox"><span>ブランケット</span></label>
+        <label class="check-item"><input type="checkbox"><span>帽子・手袋</span></label>
+        <label class="check-item"><input type="checkbox"><span>水筒・飲み物</span></label>
+        <label class="check-item"><input type="checkbox"><span>日焼け止め</span></label>
+      </div>
+      <div class="checklist-group">
+        <h4>💰 重要</h4>
+        <label class="check-item"><input type="checkbox"><span>💴 現金（こどもの国は現金のみ！）</span></label>
+        <label class="check-item"><input type="checkbox"><span>カメラ</span></label>
+        <label class="check-item"><input type="checkbox"><span>モバイルバッテリー</span></label>
+        <label class="check-item"><input type="checkbox"><span>レジャーシート</span></label>
+        <label class="check-item"><input type="checkbox"><span>ビニール袋</span></label>
+      </div>
+    </section>
 
-  <!-- ===== CHECKLIST ===== -->
-  <section class="checklist-section">
-    <h2>🎒 持ち物チェックリスト</h2>
-    <div class="checklist-group">
-      <h4>👶 赤ちゃん用品</h4>
-      <label class="check-item"><input type="checkbox"><span>おむつ・おしりふき（多めに）</span></label>
-      <label class="check-item"><input type="checkbox"><span>授乳グッズ / ミルク</span></label>
-      <label class="check-item"><input type="checkbox"><span>離乳食・おやつ</span></label>
-      <label class="check-item"><input type="checkbox"><span>着替え（2〜3組）</span></label>
-      <label class="check-item"><input type="checkbox"><span>抱っこ紐</span></label>
-      <label class="check-item"><input type="checkbox"><span>お気に入りのおもちゃ</span></label>
-    </div>
-    <div class="checklist-group">
-      <h4>🧥 防寒・お出かけ</h4>
-      <label class="check-item"><input type="checkbox"><span>防寒着（土曜は朝5℃！）</span></label>
-      <label class="check-item"><input type="checkbox"><span>ブランケット</span></label>
-      <label class="check-item"><input type="checkbox"><span>帽子・手袋</span></label>
-      <label class="check-item"><input type="checkbox"><span>水筒・飲み物</span></label>
-      <label class="check-item"><input type="checkbox"><span>日焼け止め</span></label>
-    </div>
-    <div class="checklist-group">
-      <h4>💰 重要</h4>
-      <label class="check-item"><input type="checkbox"><span>💴 現金（こどもの国は現金のみ！）</span></label>
-      <label class="check-item"><input type="checkbox"><span>カメラ</span></label>
-      <label class="check-item"><input type="checkbox"><span>モバイルバッテリー</span></label>
-      <label class="check-item"><input type="checkbox"><span>レジャーシート</span></label>
-      <label class="check-item"><input type="checkbox"><span>ビニール袋</span></label>
-    </div>
-  </section>
+    <!-- ===== MEMO ===== -->
+    <section class="memo-section">
+      <h2>📝 メモ</h2>
+      <textarea class="memo-area" placeholder="気づいたことや思い出を書き留めよう…"></textarea>
+    </section>
 
-  <!-- ===== MEMO ===== -->
-  <section class="memo-section">
-    <h2>📝 メモ</h2>
-    <textarea class="memo-area" placeholder="気づいたことや思い出を書き留めよう…"></textarea>
-  </section>
+    <!-- ===== FOOTER ===== -->
+    <footer class="shiori-footer">
+      <span class="heart">♥</span><br>
+      ゆーさん・ひーさん・友陽、素敵な三連休を！<br>
+      <small>2026.2.21-23</small>
+    </footer>
+  </div>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="shiori-footer">
-    <span class="heart">♥</span><br>
-    三連休、家族で素敵な思い出を！<br>
-    <small>2026.2.21-23</small>
-  </footer>
-</div>
-
-<script>
-document.querySelectorAll('.check-item input').forEach(cb => {
-  cb.addEventListener('change', function() {
-    this.closest('.check-item').classList.toggle('checked', this.checked);
-  });
-});
-</script>
+  <script>
+    document.querySelectorAll('.check-item input').forEach(cb => {
+      cb.addEventListener('change', function () {
+        this.closest('.check-item').classList.toggle('checked', this.checked);
+      });
+    });
+  </script>
 </body>
+
 </html>
